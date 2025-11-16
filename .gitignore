@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Production
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Firebase
+service-account-key.json
+firebase-config.json
+firebase-adminsdk-*.json
+
+# Sensitive configuration files with API keys
+src/config/firebase.js
+src/config/adminConfig.js
+
+# API Keys and Secrets
+*.key
+*.pem
+*.p12
+*-key.json
+*-keys.json
+*-secret.json
+secrets/
+*.secret
+*secret*
+
+# Environment and credentials
+.env*
+!.env.example
+credentials/
+*.credentials
+config.local.js
+config.production.js
+

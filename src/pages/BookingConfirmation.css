@@ -1,0 +1,201 @@
+.booking-confirmation-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.confirmation-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  animation: scaleIn 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.confirmation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--success-color), var(--primary-color));
+  animation: slideInRight 0.8s ease-out;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.success-icon {
+  font-size: 64px;
+  color: var(--success-color);
+  margin-bottom: 16px;
+  animation: scaleIn 0.5s ease-out, pulse 2s ease-in-out infinite 0.5s;
+}
+
+.success-header h1 {
+  font-size: 32px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.success-header p {
+  color: var(--text-secondary);
+  font-size: 18px;
+}
+
+.booking-id {
+  text-align: center;
+  padding: 16px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.id-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-right: 8px;
+}
+
+.id-value {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.ticket-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.ticket-section {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.ticket-section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 8px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-right: 8px;
+}
+
+.detail-value {
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+}
+
+.fare-section .detail-value {
+  font-size: 20px;
+}
+
+.fare-amount {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.status-confirmed {
+  color: var(--success-color);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.passenger-detail-card {
+  background: var(--bg-light);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.passenger-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.passenger-number {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.seat-assignment {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 24px;
+  }
+  
+  .ticket-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .detail-value {
+    text-align: left;
+  }
+  
+  .confirmation-actions {
+    flex-direction: column;
+  }
+  
+  .confirmation-actions .btn {
+    width: 100%;
+  }
+}
+

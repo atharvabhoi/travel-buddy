@@ -1,0 +1,461 @@
+.bus-details-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.bus-details-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  max-width: 900px;
+  margin: 0 auto;
+  animation: slideInUp 0.6s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.bus-details-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.bus-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.bus-main-info h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.bus-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--warning-color);
+}
+
+.rating-text {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.operator {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.bus-price-large {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.route-info {
+  margin-bottom: 32px;
+}
+
+.route-points {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.route-point {
+  flex: 1;
+}
+
+.point-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.point-time {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.point-city {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.route-duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  padding: 0 16px;
+}
+
+.route-duration svg {
+  font-size: 24px;
+}
+
+.bus-features {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.bus-features h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 12px;
+}
+
+.feature-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  min-width: 140px;
+}
+
+.feature-value {
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.booking-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 2px solid var(--border-color);
+}
+
+.travel-date {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.date-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+/* Bus Photos Section */
+.bus-photos-section {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.photos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.photos-header h3 {
+  font-size: 20px;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.photo-type-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.photo-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.photo-tab:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.photo-tab.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.photo-count {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-photo-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.main-photo-container:hover .main-photo {
+  transform: scale(1.02);
+}
+
+.photo-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.photo-nav-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.photo-nav-btn.prev-btn {
+  left: 16px;
+}
+
+.photo-nav-btn.next-btn {
+  right: 16px;
+}
+
+.photo-counter {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.photo-thumbnails {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 8px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #f0f0f0;
+}
+
+.photo-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.photo-thumbnails::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.photo-thumbnails::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+.photo-thumbnail {
+  min-width: 100px;
+  width: 100px;
+  height: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  background: #f5f5f5;
+}
+
+.photo-thumbnail:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.photo-thumbnail.active {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(226, 55, 68, 0.2);
+}
+
+.photo-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+  gap: 16px;
+}
+
+.no-photos-icon {
+  font-size: 48px;
+  opacity: 0.5;
+}
+
+.no-photos p {
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .bus-details-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .route-points {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .route-duration {
+    flex-direction: row;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: none;
+    border-right: none;
+    width: 100%;
+  }
+  
+  .booking-section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  .btn-large {
+    width: 100%;
+  }
+
+  .photos-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photo-type-tabs {
+    width: 100%;
+  }
+
+  .photo-tab {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .main-photo-container {
+    height: 250px;
+  }
+
+  .photo-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .photo-nav-btn.prev-btn {
+    left: 8px;
+  }
+
+  .photo-nav-btn.next-btn {
+    right: 8px;
+  }
+
+  .photo-thumbnail {
+    min-width: 80px;
+    width: 80px;
+    height: 60px;
+  }
+}
+
